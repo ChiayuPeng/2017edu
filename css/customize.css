@@ -1,0 +1,333 @@
+/*公用樣式*/
+* {
+box-sizing: border-box;
+-weblit-overflow-scrolling: touch;
+/*outline: 1px solid #000;*/
+}
+html, body {
+height: 100%;
+}
+body {
+position: relative;
+color: #373737;
+font-family: Roboto, "Noto Sans TC", "微軟正黑體", "繁黑體", 'Microsoft JhengHei', 'Microsoft YaHei', 'Heiti TC', 'LiHei Pro', sans-serif, "新細明體", PMingLiU;
+font-weight: 300;
+line-height: 1.5;
+letter-spacing: 0.1em;
+}
+a, a:hover {
+transition: all 0.3s;
+text-decoration: none;
+}
+.clearfix {
+clear: both;
+}
+/*icon*/
+@font-face {
+font-family: 'icomoon';
+src:  url('../fonts/icomoon.eot?s0ut88');
+src:  url('../fonts/icomoon.eot?s0ut88#iefix') format('embedded-opentype'),
+url('../fonts/icomoon.ttf?s0ut88') format('truetype'),
+url('../fonts/icomoon.woff?s0ut88') format('woff'),
+url('../fonts/icomoon.svg?s0ut88#icomoon') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+/* use !important to prevent issues with browser extensions that change fonts */
+font-family: 'icomoon' !important;
+speak: none;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+/* Better Font Rendering =========== */
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+.icon-chevron-down:before {
+content: "\e902";
+}
+.icon-chevron-left:before {
+content: "\e903";
+}
+.icon-chevron-right:before {
+content: "\e904";
+}
+.icon-menu:before {
+content: "\e905";
+}
+.icon-minus:before {
+content: "\e906";
+}
+.icon-plus:before {
+content: "\e907";
+}
+.icon-xx:before {
+content: "\e908";
+}
+.icon-line:before {
+content: "\e901";
+}
+.icon-fb:before {
+content: "\e900";
+}
+/*nav*/
+nav{
+height: 50px;
+border-bottom: 1px solid #b8babb;
+background-color: #fff;
+}
+/*四大特色清單頁面 guidelist*/
+/*顏色控制*/
+.features1 {
+background-color: #92d744;
+border-color:#92d744;
+}
+.features2 {
+background-color: #00d2ab;
+border-color:#00d2ab;
+}
+.features3 {
+background-color: #00e8e2;
+border-color:#00e8e2;
+}
+.features4 {
+background-color: #0dd12e;
+border-color:#0dd12e;
+}
+/*titBar*/
+.titBar{
+height: 50.2vh;
+text-align: center;
+color: #15275c;
+overflow: hidden;
+}
+.features1 .titBar{background-color: #92d744;}
+.features2 .titBar{background-color: #00d2ab;}
+.features3 .titBar{background-color: #00e8e2;;}
+.features4 .titBar{background-color: #0dd12e;;}
+.titBar span{
+background-size: cover;
+background-image: url(../img/titdecorate.png);
+display: block;
+position: absolute;
+bottom: 49.9%;
+width: 100%;
+height: 3%;
+}
+.titBar h3{
+font-size: 1.5em;
+}
+.box-loading {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+.box-loading:before {
+content: '';
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+border-radius: 40%;
+background: radial-gradient(ellipse at center, #fff 0%, rgba(85, 139, 219, 0) 100%);
+}
+.box-loading .cirlce-wave {
+width: 100%;
+height: 100%;
+border-radius: 42%;
+position: absolute;
+z-index: 1;
+}
+.box-loading .cirlce-wave--1 {
+background: rgba(255, 255, 255, 0.3);
+opacity: 0.3;
+animation: load 2s infinite linear;
+z-index: 5;
+}
+.box-loading .cirlce-wave--2 {
+background: rgba(255, 255, 255, 0.4);
+opacity: 0.4;
+animation: load 4s infinite linear;
+z-index: 4;
+}
+.box-loading .cirlce-wave--3 {
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.5);
+opacity: 0.5;
+animation: load 6s infinite linear;
+z-index: 3;
+}
+.box-loading .cirlce-wave--4 {
+background: rgba(255, 255, 255, 0.7);
+opacity: 0.6;
+animation: load 9s infinite linear;
+z-index: 2;
+}
+.box-loading .cirlce-wave--5 {
+background: rgba(255, 255, 255, 0.9);
+opacity: 0.7;
+animation: load 4s infinite linear;
+z-index: 1;
+}
+.titBar img{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+width: 150px;
+height: 150px;
+z-index: 6;
+}
+@keyframes load {
+from {
+transform: rotate(360deg);
+}
+}
+@media (min-width: 375px) {
+}
+@media (min-width: 414px) {
+
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 1024px) {
+.box-loading {
+  width: 250px;
+  height: 250px;
+}
+.titBar img{
+  top: 20px;
+  bottom: 0;
+  left: 25px;
+  right: 0;
+  width: 200px;
+  height: 200px;
+}
+}
+@media (min-width: 1200px) {
+.titBar{
+height: 45.2vh;
+}
+}
+/*四大特色清單頁面*/
+.guidelist{
+padding: 70px 0;
+color: #15275c;
+background-color:#fff;
+}
+.panel-default > .panel-heading{
+background-color: #fff;
+}
+.panel-default > .panel-heading:hover{
+background-color:#f2f2f2;
+text-decoration: none;
+}
+.panel-heading ,.sponsor{
+padding: 15px 20px;
+}
+.sponsor {
+background-color: #f2f2f2;
+margin-bottom: 0;
+border-radius: 4px;
+}
+.sponsor span{
+padding: 3px 5px;
+font-size: 14px;
+font-weight: lighter;
+letter-spacing: 3px;
+color: #fff;
+display: inline-block;
+background-color: #15275c;
+border-radius: 4px;
+}
+a h4.panel-title{
+display:inline-block;
+color: #15275c;
+font-size: 18px;
+text-decoration:none;
+}
+.panel .open{
+float: right;
+font-size: 25px;
+color: #15275c;
+}
+ul,li{
+padding: 0;
+margin: 0;
+list-style: none;
+}
+ul.panel-body li{
+line-height: 2.2em;
+padding-left: 15px;
+font-weight: 400;
+}
+ul.panel-body li i{
+width: 25px;
+height: 25px;
+margin: 8px;
+vertical-align:middle;
+display:inline-block;
+background-repeat: no-repeat;
+}
+ul.panel-body li:nth-child(1) i{background-image:url(../img/i1.svg);}
+ul.panel-body li:nth-child(2) i{background-image:url(../img/i2.svg);}
+ul.panel-body li:nth-child(3) i{background-image:url(../img/i3.svg);}
+ul.panel-body li:nth-child(4) i{background-image:url(../img/i4.svg);}
+ul.panel-body li:nth-child(5) i{background-image:url(../img/i5.svg);}
+ul.panel-body li:nth-child(6) i{background-image:url(../img/i6.svg);}
+ul.panel-body li:nth-child(7) i{background-image:url(../img/i7.svg);}
+ul.panel-body .link{
+font-weight: bold;
+margin-top: 10px;
+padding-left: 24px;
+}
+ul.panel-body > a{
+display: inline-block;
+padding: 3px 10px;
+margin-left: 24px;
+margin-bottom: 20px;
+border-radius: 3px;
+color: #15275c;
+text-decoration: none;
+}
+.features1 ul.panel-body > a{border:1px solid #92d744;}
+.features2 ul.panel-body > a{border:1px solid #00d2ab;}
+.features3 ul.panel-body > a{border:1px solid #00e8e2;}
+.features4 ul.panel-body > a{border:1px solid #0dd12e;}
+p.iconFonts{
+display: inline-block;
+float: right;
+margin: 15px 20px;
+}
+a.btn
+{
+display: block;
+margin: 0 auto;
+width: 250px;
+height: 45px;
+color: #fff;
+text-align: center;
+font-weight: 500;
+line-height: 45px;
+border-radius: 3px;
+text-decoration: none;
+}
+.features1 a.btn{background-color: #92d744}
+.features2 a.btn{background-color: #00d2ab}
+.features3 a.btn{background-color: #00e8e2}
+.features4 a.btn{background-color: #0dd12e}
+/*footer*/
+footer{
+height: 80px;
+padding: 20px 0;
+border-top: 1px solid #b8babb;
+font-size: 0.6em;
+}
