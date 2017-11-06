@@ -1,0 +1,292 @@
+/*公用樣式*/
+* {
+	box-sizing: border-box;
+	-weblit-overflow-scrolling: touch;
+}
+html, body {
+	height: 100%;
+}
+body {
+	position: relative;
+	color: #373737;
+	font-family: Roboto, "Noto Sans TC", "微軟正黑體", "繁黑體", 'Microsoft JhengHei', 'Microsoft YaHei', 'Heiti TC', 'LiHei Pro', sans-serif, "新細明體", PMingLiU;
+	font-weight: 300;
+	line-height: 1.5;
+	letter-spacing: 0.05em;
+}
+.serif {
+	font-family: "Times New Roman", "source-han-serif-tc", "新細明體", PMingLiU, serif;
+}
+a, a:hover {
+	transition: all 0.3s;
+	text-decoration: none;
+}
+a.btn {
+	position: relative;
+	font-weight: 400;
+	border-radius: 5px;
+	transition: all 2s ease;
+	overflow: hidden;
+	cursor: pointer;
+}
+a.btn span {
+	content: '';
+	position: absolute;
+	top: 1.5em;
+	left: 50%;
+	margin-left: -10em;
+	width: 20em;
+	height: 20em;
+	border-radius: 42.5%;
+	opacity: 0;
+	transform-origin: 50% 50%;
+	transition: all 2s ease, top 1.5s ease;
+}
+a.btn:hover span {
+	animation: wave 5s infinite linear;
+}
+.clearfix {
+	clear: both;
+}
+.page {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	padding-bottom: 100px;
+	/*background: #1e384c;*/
+	overflow: hidden;
+}
+@media (min-width: 1366px) {
+	.page {
+		height: 300px;
+		padding-bottom: 150px;
+	}
+}
+@media (min-width: 1920px) {
+	.page {
+		margin-top: 2em;
+		height: 400px;
+		padding-bottom: 200px;
+	}
+}
+.water {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	bottom: 0;
+	left: 0;
+	background: #f54b6d;
+	background: -moz-linear-gradient(top, #f54b6d 0%, #ff648f 100%);
+	background: -webkit-linear-gradient(top, #f54b6d 0%,#ff648f 100%);
+	background: linear-gradient(to bottom, #f54b6d 0%,#ff648f 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f54b6d', endColorstr='#ff648f',GradientType=0 );
+}
+.water__wave {
+	width: 200%;
+	position: absolute;
+	bottom: 100%;
+}
+.water__wave_back {
+	right: 0;
+	fill: url(#water1);
+	fill-opacity: 0.3;
+	animation: wave-back 2.8s infinite linear;
+}
+.water__wave_mid {
+	right: 0;
+	fill: url(#water1);
+	fill-opacity: 0.3;
+	animation: wave-back 4.9s infinite linear;
+}
+.water__wave_front {
+	left: 0;
+	fill: url(#water1);
+	margin-bottom: -1px;
+	animation: wave-front 1.4s infinite linear;
+}
+@keyframes wave-front {
+	100% {
+		transform: translate(-50%, 0);
+	}
+}
+@keyframes wave-back {
+	100% {
+		transform: translate(50%, 0);
+	}
+}
+header {
+	padding-top: 70px;
+}
+header .copyWrite {
+	max-width: 480px;
+}
+header .copyWrite h1 {
+	color: #202758;
+	margin-bottom: 0.5em;
+	font-size: 48px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+header .copyWrite h1 span {
+	display: inline-block;
+	font-size: 27px;
+	font-weight: 500;
+	line-height: 1;
+}
+header .copyWrite p {
+	font-size: 16px;
+}
+footer {
+	padding: 15px 0;
+	color: #202758;
+	font-size: 13px;
+	font-weight: 400;
+	text-align: center;
+	border-top: 1px solid #BDBCBC;
+}
+footer span {
+	display: block;
+}
+main .intro {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: #ff648f;
+	background: -moz-linear-gradient(top, #ff648f 0%, #eb324a 100%);
+	background: -webkit-linear-gradient(top, #ff648f 0%,#eb324a 100%);
+	background: linear-gradient(to bottom, #ff648f 0%,#eb324a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff648f', endColorstr='#eb324a',GradientType=0 );
+}
+.card .card-img {
+	position: relative;
+	width: 100%;
+	padding-top: 70.13888888888889%;
+	margin-bottom: 25px;
+	overflow: hidden;
+}
+.card .card-img img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 100%;
+	transform: translate(-50%,-50%);
+	animation: changeFront 5s linear infinite forwards;
+}
+.card .card-img img + img {
+	opacity: 0;
+	animation: changeBack 5s linear infinite forwards;
+}
+@keyframes changeFront {
+	0%		{opacity:1}
+	45%		{opacity:1}
+	50%		{opacity:0}
+	95%		{opacity:0}
+	100%	{opacity:1}
+}
+@keyframes changeBack {
+	0%		{opacity:0}
+	45%		{opacity:0}
+	50%		{opacity:1}
+	95%		{opacity:1}
+	100%	{opacity:0}
+}
+.card .card-body {
+	position: relative;
+	margin-top: 1em;
+	padding: 40px 25px 25px;
+	color: #202758;
+	text-align: center;
+	background-color: #fff;
+}
+.card .card-body:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 100%;
+	display: block;
+	width: 100%;
+	height: 18px;
+	background-image: url(../img/slideTextDecorate.svg);
+	background-position: center;
+	background-size: cover;
+}
+.card .card-body h6,
+.card .card-body h4 {
+	margin: 0;
+}
+.card .card-body h6 {
+	font-size: 18px;
+	font-weight: 400;
+}
+.card .card-body h4 {
+	font-size: 30px;
+}
+.card .card-decoration {
+	position: relative;
+	padding: 30px 25px;
+}
+.card .card-decoration:before,
+.card .card-decoration:after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 115px;
+	height: 115px;
+	background-image: url(../img/textDecorate.svg);
+	background-position: top left;
+	background-size: cover;
+}
+.card .card-decoration:before {
+	top: 0;
+	left: 0;
+}
+.card .card-decoration:after {
+	bottom: 0;
+	right: 0;
+	transform: rotate(180deg);
+}
+.card .card-body p {
+	font-size: 13px;
+	font-weight: 400;
+}
+.card .card-body p span {
+	display: inline-block;
+}
+.card a.btn {
+	display: inline-block;
+	padding: 5px 20px;
+	margin-top: 25px;
+	color: #fff;
+	background-color: #FF4776;
+}
+.card a.btn span {
+	background: #fff;
+}
+@keyframes wave {
+	0% {transform: rotate(0deg) scale(1);}
+	5% {opacity: 0.3;}
+	50% {transform: rotate(180deg) scale(0.975);}
+	95% {opacity: 0.3;}
+	100% {transform: rotate(360deg) scale(1);}
+}
+@media (min-width: 375px) {
+	header .copyWrite h1 {
+		line-height: 1;
+	}
+}
+@media (min-width: 769px) {
+	header .copyWrite h1 {
+		font-size: 60px;
+	}
+	header .copyWrite h1 span {
+		font-size: 38px;
+	}
+	header .copyWrite p {
+		font-size: 21px;
+	}
+	.card .card-body {
+		padding: 40px 35px 25px;
+	}
+	.card .card-decoration {
+		padding: 30px 180px;
+	}
+}
