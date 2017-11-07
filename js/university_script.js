@@ -66,32 +66,41 @@
     for (var i = 0; i < data.length; i++) {
         if (data[i]["cross_course"] === "Y" && typeID === "1") {
             $("#accordion").append("<div class='panel panel-default'><a data-toggle='collapse' data-parent='#accordion' href='#collapse" + i + "'><div class='panel-heading'>" +
-                                   "<h4 class='panel-title'>" + data[i]["university"] + "</h4><span class='open icon-plus'></span></div></a><div id='collapse" + i + "' class='panel-collapse collapse'>" +
-                                    "<ul class='panel-body'><li><i></i>外國學生人數:" + data[i]["fori_student"] + "</li><li><i></i>本國學生出國進修、交流人數:" + data[i]["local_student"] + "</li><li><i></i>跨國(境)學位合作(雙聯學制)學校數:</li>" +
-                                    "<li><i></i>新南向海外實習人數:" + data[i]["intern_student"] + "</li><li><i></i>全英語學程數:" + data[i]["english_course"] + "</li><li><i></i>外籍專任教師數:</li><li><i></i>國際化特色/策略:<br/>" + data[i]["international_point"] + "</li>" +
+                                   "<h4 class='panel-title'>" + data[i]["university"] + "</h4><span class='open'></span></div></a><div id='collapse" + i + "' class='panel-collapse collapse'>" +
+                                    "<ul class='panel-body'><li><i></i>外國學生人數：" + data[i]["fori_student"] + "</li><li><i></i>本國學生出國進修、交流人數：" + data[i]["local_student"] + "</li>" +
+                                    "<li><i></i>新南向海外實習人數：" + data[i]["intern_student"] + "</li><li><i></i>全英語學程數：" + data[i]["english_course"] + "</li><li><i></i>國際化特色：<br/>" + data[i]["international_point"] + "</li>" +
                                     "<li class='link'>延伸閱讀</li><a href='#'>" + data[i]["more"] + "</a></ul></div></div>");
         }
         if (data[i]["short_term"] === "Y" && typeID === "2") {
             $("#accordion").append("<div class='panel panel-default'><a data-toggle='collapse' data-parent='#accordion' href='#collapse" + i + "'><div class='panel-heading'>" +
-                                   "<h4 class='panel-title'>" + data[i]["university"] + "</h4><span class='open icon-plus'></span></div></a><div id='collapse" + i + "' class='panel-collapse collapse'>" +
-                                    "<ul class='panel-body'><li><i></i>外國學生人數:" + data[i]["fori_student"] + "</li><li><i></i>本國學生出國進修、交流人數:" + data[i]["local_student"] + "</li><li><i></i>跨國(境)學位合作(雙聯學制)學校數:</li>" +
-                                    "<li><i></i>新南向海外實習人數:" + data[i]["intern_student"] + "</li><li><i></i>全英語學程數:" + data[i]["english_course"] + "</li><li><i></i>外籍專任教師數:</li><li><i></i>國際化特色/策略:<br/>" + data[i]["international_point"] + "</li>" +
-                                    "<li class='link'>延伸閱讀</li><a href='#'>" + data[i]["more"] + "</a></ul></div></div>");
+                                "<h4 class='panel-title'>" + data[i]["university"] + "</h4><span class='open'></span></div></a><div id='collapse" + i + "' class='panel-collapse collapse'>" +
+                                 "<ul class='panel-body'><li><i></i>外國學生人數：" + data[i]["fori_student"] + "</li><li><i></i>本國學生出國進修、交流人數：" + data[i]["local_student"] + "</li>" +
+                                 "<li><i></i>新南向海外實習人數：" + data[i]["intern_student"] + "</li><li><i></i>全英語學程數：" + data[i]["english_course"] + "</li><li><i></i>國際化特色：<br/>" + data[i]["international_point"] + "</li>" +
+                                 "<li class='link'>延伸閱讀</li><a href='#'>" + data[i]["more"] + "</a></ul></div></div>");
         }
         if (data[i]["internship"] === "Y" && typeID === "3") {
             $("#accordion").append("<div class='panel panel-default'><a data-toggle='collapse' data-parent='#accordion' href='#collapse" + i + "'><div class='panel-heading'>" +
-                                   "<h4 class='panel-title'>" + data[i]["university"] + "</h4><span class='open icon-plus'></span></div></a><div id='collapse" + i + "' class='panel-collapse collapse'>" +
-                                    "<ul class='panel-body'><li><i></i>外國學生人數:" + data[i]["fori_student"] + "</li><li><i></i>本國學生出國進修、交流人數:" + data[i]["local_student"] + "</li><li><i></i>跨國(境)學位合作(雙聯學制)學校數:</li>" +
-                                    "<li><i></i>新南向海外實習人數:" + data[i]["intern_student"] + "</li><li><i></i>全英語學程數:" + data[i]["english_course"] + "</li><li><i></i>外籍專任教師數:</li><li><i></i>國際化特色/策略:<br/>" + data[i]["international_point"] + "</li>" +
-                                    "<li class='link'>延伸閱讀</li><a href='#'>" + data[i]["more"] + "</a></ul></div></div>");
+                                 "<h4 class='panel-title'>" + data[i]["university"] + "</h4><span class='open'></span></div></a><div id='collapse" + i + "' class='panel-collapse collapse'>" +
+                                  "<ul class='panel-body'><li><i></i>外國學生人數：" + data[i]["fori_student"] + "</li><li><i></i>本國學生出國進修、交流人數：" + data[i]["local_student"] + "</li>" +
+                                  "<li><i></i>新南向海外實習人數：" + data[i]["intern_student"] + "</li><li><i></i>全英語學程數：" + data[i]["english_course"] + "</li><li><i></i>國際化特色：<br/>" + data[i]["international_point"] + "</li>" +
+                                  "<li class='link'>延伸閱讀</li><a href='#'>" + data[i]["more"] + "</a></ul></div></div>");
         }
         if (data[i]["internalize"] === "Y" && typeID === "4") {
             $("#accordion").append("<div class='panel panel-default'><a data-toggle='collapse' data-parent='#accordion' href='#collapse" + i + "'><div class='panel-heading'>" +
-                                   "<h4 class='panel-title'>" + data[i]["university"] + "</h4><span class='open icon-plus'></span></div></a><div id='collapse" + i + "' class='panel-collapse collapse'>" +
-                                    "<ul class='panel-body'><li><i></i>外國學生人數:" + data[i]["fori_student"] + "</li><li><i></i>本國學生出國進修、交流人數:" + data[i]["local_student"] + "</li><li><i></i>跨國(境)學位合作(雙聯學制)學校數:</li>" +
-                                    "<li><i></i>新南向海外實習人數:" + data[i]["intern_student"] + "</li><li><i></i>全英語學程數:" + data[i]["english_course"] + "</li><li><i></i>外籍專任教師數:</li><li><i></i>國際化特色/策略:<br/>" + data[i]["international_point"] + "</li>" +
-                                    "<li class='link'>延伸閱讀</li><a href='#'>" + data[i]["more"] + "</a></ul></div></div>");
+                                "<h4 class='panel-title'>" + data[i]["university"] + "</h4><span class='open'></span></div></a><div id='collapse" + i + "' class='panel-collapse collapse'>" +
+                                 "<ul class='panel-body'><li><i></i>外國學生人數：" + data[i]["fori_student"] + "</li><li><i></i>本國學生出國進修、交流人數：" + data[i]["local_student"] + "</li>" +
+                                 "<li><i></i>新南向海外實習人數：" + data[i]["intern_student"] + "</li><li><i></i>全英語學程數：" + data[i]["english_course"] + "</li><li><i></i>國際化特色：<br/>" + data[i]["international_point"] + "</li>" +
+                                 "<li class='link'>延伸閱讀</li><a href='#'>" + data[i]["more"] + "</a></ul></div></div>");
         }
     }
+
+    function toggleIcon(e) {
+        console.log(e);
+        $(e.target).prev('.panel-heading')
+            .find(".open")
+            .toggleClass("icon-plus icon-minus");
+    }
+    $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+    $('.panel-group').on('shown.bs.collapse', toggleIcon);
 
 });
